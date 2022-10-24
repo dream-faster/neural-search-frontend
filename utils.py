@@ -19,17 +19,10 @@ def fetch(URL:str, PARAMS:dict)->dict:
     return r.json()
     
 
-def get_prediction(text_to_predict: str, pipeline_name:str = 'random'):
-    URL = f"{url_root}/detect"
-    PARAMS = {'text':text_to_predict, "pipeline_name": pipeline_name}
+def get_prediction(text_to_predict: str):
+    URL = f"{url_root}/query"
+    PARAMS = {'code':text_to_predict}
 
     data = fetch(URL, PARAMS)
     
-    return data['result']
-
-def get_hierarchy(pipeline_name:str = 'random'):
-    URL = f"{url_root}/pipeline"
-    PARAMS = {"pipeline_name": pipeline_name}
-
-    data = fetch(URL, PARAMS)
-    return data['hierarchy']
+    return data['data']
