@@ -2,14 +2,10 @@ import streamlit as st
 from utils import get_prediction
 import pandas as pd
 
-st.set_page_config(page_title="Hate Speech with Modular Pipelines", page_icon="😾")
+st.set_page_config(page_title="Neural Code Search with Transformers", page_icon="🔎")
 
-st.title('Hate Speech detection with Modular Pipelines')
+st.title('Neural Code Search with Transformers')
 st.subheader('Interactive frontend to the API')
-
-sad_img= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm8NnfldcgEdYwWwDnDtjanI61Nq33Y_Ag3g&usqp=CAU"
-happy_img= "https://i.guim.co.uk/img/media/7a2f365685c03860db34e122bc5165a01874dfde/0_112_5093_3055/master/5093.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=66a0eedff1916b274c39b8b781441a10"
-
 
 
 with st.form("my_form"):
